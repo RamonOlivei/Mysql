@@ -1,4 +1,3 @@
-# Mysql
 CREATE TABLE users (
 	id SERIAL PRIMARY KEY,
 	nome VARCHAR(100) NOT NULL,
@@ -73,6 +72,7 @@ INSERT INTO funcionarios (cargo, salario, user_id)
 		   ('Estagiario', 2000.00, 4);
 
 
+CREATE VIEW funcionarios_web AS
 
 SELECT 
 users.nome,
@@ -85,5 +85,8 @@ FROM funcionarios
 
 JOIN 
 users on users.id = funcionarios.id;
+
+SELECT * FROM funcionarios_web;
+
 
 	
